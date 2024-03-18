@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Scrolling</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #usernames {
+            background:rgba(254, 254, 254, 0.578);
+            height: 50vh;
+            width: 500px;
+            max-height: 50vh;
+            overflow-y: scroll;
+            border: 1px solid #212020;
+            display: flex;
+            flex-direction: column;
+            margin: 0 0;
+            padding: 0 0;
+            /* padding-top: 20px; */
+        }
+        .username-item {
+            border-bottom: 1px solid #ccc;
+        }
+        #usernames > li {
+            list-style: none;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        #alphaSearch {
+            position: fixed;
+            display: block;
+            flex-direction: row;
+            left: calc(50% + (500px / 2) - 40px);
+            background-color: white;
+            padding: 5px;
+        }
+        #alphaSearch button {
+            border: none;
+            padding: 0 0;
+            margin:  0 0;
+            cursor: pointer;
+            background: none;
+            color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <ul id="usernames"></ul>
+
+    <div id="menu"></div>
+    <!-- this for sarch with alpha a-z -->
+    <div id="alphaSearch"></div>
+    <script src="algorithm.js"></script>
+</body>
+</html>
